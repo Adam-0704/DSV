@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>Ledige Mødelokaler</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Navn</th>
+            <th>Kapacitet</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach (var room in Model.MeetingRooms)
+        {
+            <tr>
+                <td>@room.Name</td>
+                <td>@room.Capacity personer</td>
+                <td>@(room.IsAvailable ? "Ledig" : "Optaget")</td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
+
+
