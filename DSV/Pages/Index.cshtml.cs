@@ -12,9 +12,10 @@ namespace DSV.Pages
         {
             MeetingRooms = new List<MeetingRoom>
         {
-            new MeetingRoom { ID = 1, Name = "Mødelokale A", Capacity = 10, IsAvailable = true },
-            new MeetingRoom { ID = 2, Name = "Mødelokale B", Capacity = 20, IsAvailable = false },
-            new MeetingRoom { ID = 3, Name = "Mødelokale C", Capacity = 15, IsAvailable = true }
+            new MeetingRoom { ID = 1, Name = "Mødelokale A", Capacity = 10, IsAvailable = true,BookingPage ="/BookingPage" },
+            new MeetingRoom { ID = 2, Name = "Mødelokale B", Capacity = 20, IsAvailable = true,MødelokaleB = "/Mødelokale B" },
+            new MeetingRoom { ID = 3, Name = "Mødelokale C", Capacity = 15, IsAvailable = true },
+
         };
 
         }
