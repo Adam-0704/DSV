@@ -6,7 +6,7 @@
 
 <h2>Mødelokaler</h2>
 
-<table >
+<table class="table">
     <thead>
         <tr>
             <th>Navn</th>
@@ -26,12 +26,12 @@
                     @if (room.IsAvailable)
                     {
                         <a asp-page="/BookingPage" asp-route-roomId="@room.ID">
-                            <button >BOOK NOW</button>
+                            <button class="btn btn-primary">BOOK NOW</button>
                         </a>
                     }
                     else
                     {
-                        <button disabled>Optaget</button>
+                        <button class="btn btn-secondary" disabled>Optaget</button>
                     }
                 </td>
             </tr>
