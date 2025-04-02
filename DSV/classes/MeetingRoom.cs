@@ -7,5 +7,12 @@
         public int Capacity { get; set; }
         public bool IsAvailable { get; set; }
 
+
+        
+        
+
+
+
     }
+
 }
