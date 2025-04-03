@@ -3,3 +3,24 @@
 @{
 }
 <h1>Mødelokale B</h1>
+
+<form method="post">
+<input type="text" placeholder="Enter your Name"name="name"  />
+
+<input type="date" />
+
+<input type="time" />
+
+<br />
+<br />
+
+
+<button class="btn btn-primary" asp-page-handler="ConfirmBooking">book</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.ConfirmationMessage))
+{
+    <div class="alert alert-success">
+        @Model.ConfirmationMessage
+    </div>
+}
