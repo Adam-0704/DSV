@@ -26,7 +26,7 @@
                     @if (room.IsAvailable)
                     {
                         <a asp-page="/@room.Name" asp-for= asp-route-roomId="@room.ID">
-                            <button class="btn btn-primary">book @room.Name</button>
+                            <button class="btn btn-primary">Book @room.Name</button>
                         </a>
                     }
                     else

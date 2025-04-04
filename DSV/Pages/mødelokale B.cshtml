@@ -5,17 +5,17 @@
 <h1>Mødelokale B</h1>
 
 <form method="post">
-<input type="text" placeholder="Enter your Name"name="name"  />
+<input type="text" placeholder="Enter your Name" name="name" required />
 
-<input type="date" />
+<input type="date" placeholder="Date" required />
 
-<input type="time" />
+<input type="time" placeholder="Date" required />
 
 <br />
 <br />
 
 
-<button class="btn btn-primary" asp-page-handler="ConfirmBooking">book</button>
+<button class="btn btn-primary" asp-page-handler="ConfirmBooking">Book</button>
 </form>
 
 @if (!string.IsNullOrEmpty(Model.ConfirmationMessage))
