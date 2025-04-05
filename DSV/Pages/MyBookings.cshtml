@@ -1,0 +1,31 @@
+﻿@page
+@model MyBookingsModel
+@{
+    ViewData["Title"] = "Mine Bookninger";
+}
+
+<h2>Mine bookninger</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Navn</th>
+            <th>Dato</th>
+            <th>Tid</th>
+            <th></th> <!-- Ny kolonne til handlinger -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model.MyBookings)
+        {
+            <tr>
+                <td>@booking.Name</td>
+                <td>@booking.DateOnly</td>
+                <td>@booking.TimeOnly</td>
+                <td>
+                    <a asp-page="/Edit" asp-route-id="@booking.ID" class="btn btn-primary">Rediger</a> <!-- Rediger-knap -->
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
