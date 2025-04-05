@@ -8,11 +8,16 @@ namespace DSV.Pages
     public class BookingPageModel : PageModel
     {
         private readonly IBookingService _bookingService;
+        private int _roomid;
 
         public BookingPageModel(IBookingService bookingService)
         {
             _bookingService = bookingService;
         }
+
+
+        [BindProperty]
+        public string? RoomName { get; set; }
 
         [BindProperty]
         public string? Name { get; set; }
@@ -25,8 +30,10 @@ namespace DSV.Pages
 
         public string? ConfirmationMessage { get; set; }
 
-        public void OnGet()
+        public void OnGet(int roomId, string roomName)
         {
+            _roomid = roomId;
+            RoomName = roomName;
         }
 
         public IActionResult OnPostConfirmBooking()
@@ -39,7 +46,7 @@ namespace DSV.Pages
                 Name = Name,
                 DateOnly = Date,
                 TimeOnly = Time,
-                RoomID = 1 // Fast RoomID til 1
+                RoomID = _roomid // Fast RoomID til 1
             };
 
             _bookingService.AddBooking(newBooking); // Tilføj bookingen via BookingService

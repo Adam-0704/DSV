@@ -25,7 +25,7 @@
                 <td>
                     @if (room.IsAvailable)
                     {
-                        <a asp-page="/@room.Name" asp-for= asp-route-roomId="@room.ID">
+                        <a asp-page="BookRoom" asp-for= asp-route-roomId="@room.ID"  asp-for= asp-route-roomName="@room.Name">
                             <button class="btn btn-primary">Book @room.Name</button>
                         </a>
                     }
