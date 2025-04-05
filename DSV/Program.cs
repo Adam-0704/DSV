@@ -10,7 +10,7 @@ namespace DSV
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-            builder.Services.AddScoped<IBookingService, BookingService>();
+            builder.Services.AddSingleton<IBookingService, BookingService>();
 
             var app = builder.Build();
 
