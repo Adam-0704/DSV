@@ -3,4 +3,23 @@
 @{
 }
 
-<h1 >Edit </h1>
+<h1>Edit Booking</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="Booking.Name"></label>
+        <input asp-for="Booking.Name" class="form-control" />
+        <span asp-validation-for="Booking.Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Booking.DateOnly"></label>
+        <input asp-for="Booking.DateOnly" type="date" class="form-control" />
+        <span asp-validation-for="Booking.DateOnly" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Booking.TimeOnly"></label>
+        <input asp-for="Booking.TimeOnly" type="time" class="form-control" />
+        <span asp-validation-for="Booking.TimeOnly" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
