@@ -6,6 +6,8 @@
 <h1>Edit Booking</h1>
 
 <form method="post">
+    <input asp-for="Booking.ID" type="hidden" />
+    <input asp-for="Booking.RoomID" type="hidden" />
     <div>
         <label asp-for="Booking.Name"></label>
         <input asp-for="Booking.Name" class="form-control" />
