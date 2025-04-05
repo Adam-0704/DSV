@@ -21,5 +21,11 @@ namespace DSV.Pages
         {
             MyBookings = _bookingService.GetBookings();
         }
+
+        public IActionResult OnPostDelete(int id)
+        {
+            _bookingService.DeleteBooking(id);
+            return RedirectToPage();
+        }
     }
 }

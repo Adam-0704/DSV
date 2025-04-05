@@ -24,6 +24,9 @@
                 <td>@booking.TimeOnly</td>
                 <td>
                     <a asp-page="/Edit" asp-route-id="@booking.ID" class="btn btn-primary">Rediger</a> <!-- Rediger-knap -->
+                    <form method="post" asp-page-handler="Delete" asp-route-id="@booking.ID" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Slet</button> <!-- Slet-knap -->
+                    </form>
                 </td>
             </tr>
         }
